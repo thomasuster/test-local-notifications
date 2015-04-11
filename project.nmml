@@ -8,6 +8,8 @@
 	
 	<haxelib name="nme" />
     <haxelib name="local-notifications" />
+
+    <android minimum-sdk-version="15" target-sdk-version="15"/>
 	
 	<assets path="Assets" rename="assets" exclude="nme.svg" />
 	<icon path="Assets/nme.svg" />
