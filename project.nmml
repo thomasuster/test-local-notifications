@@ -7,7 +7,7 @@
 	<source path="Source" />
 	
 	<haxelib name="nme" />
-	<haxelib name="actuate" />
+    <haxelib name="local-notifications" />
 	
 	<assets path="Assets" rename="assets" exclude="nme.svg" />
 	<icon path="Assets/nme.svg" />
