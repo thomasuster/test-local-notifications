@@ -8,6 +8,7 @@
 	
 	<haxelib name="nme" />
     <haxelib name="local-notifications" />
+    <haxelib name="iap" />
 
     <android minimum-sdk-version="15" target-sdk-version="15"/>
 	
