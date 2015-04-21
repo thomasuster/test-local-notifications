@@ -6,7 +6,8 @@ import nme.display.Bitmap;
 import nme.display.Sprite;
 import nme.Assets;
 import nme.Lib;
-
+import flash.media.Sound;
+import nme.Assets;
 
 class Main extends Sprite {
 	
@@ -14,6 +15,9 @@ class Main extends Sprite {
 	public function new () {
 		
 		super ();
+
+        var sound:Sound = Assets.getSound('assets/melody.ogg', false);
+        sound.play();
 		
 		var bitmap = new Bitmap (Assets.getBitmapData ("assets/nme.png"));
 		addChild (bitmap);
@@ -37,7 +41,6 @@ class Main extends Sprite {
         notification.textContent = 'Hello Hugh';
         notification.milliseconds = 0;
         localNotofications.schedule(notification);
-	}
-
+    }
 	
 }
