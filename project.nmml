@@ -13,6 +13,14 @@
     <android minimum-sdk-version="15" target-sdk-version="15"/>
 	
 	<assets path="Assets" rename="assets" exclude="nme.svg" />
-	<icon path="Assets/nme.svg" />
+
+    <icon path="assets/icons_debug/Icon.png" size="57"  ></icon>
+    <icon path="assets/icons_debug/Icon@2x.png" size="114"  ></icon>
+    <icon path="assets/icons_debug/Icon-60.png" size="60"  ></icon>
+    <icon path="assets/icons_debug/Icon-60@2x.png" size="120"  ></icon>
+    <icon path="assets/icons_debug/Icon-72.png" size="72"  ></icon>
+    <icon path="assets/icons_debug/Icon-72@2x.png" size="144"  ></icon>
+    <icon path="assets/icons_debug/Icon-76.png" size="76"  ></icon>
+    <icon path="assets/icons_debug/Icon-76@2x.png" size="152"  ></icon>
 	
 </project>
