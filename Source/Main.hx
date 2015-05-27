@@ -1,3 +1,5 @@
+import flash.events.AccelerometerEvent;
+import flash.sensors.Accelerometer;
 import flash.events.MouseEvent;
 import flash.events.Event;
 import flash.display.Sprite;
@@ -16,7 +18,14 @@ class Main extends Sprite {
 		super ();
         toggleSound();
         stage.addEventListener(MouseEvent.CLICK, onEnter);
+        var a:Accelerometer = new Accelerometer();
+        a.setRequestedUpdateInterval(1/30);
+        a.addEventListener(AccelerometerEvent.UPDATE, onAccel);
 	}
+
+    function onAccel(e:AccelerometerEvent):Void {
+        trace(e.accelerationX + " " + e.accelerationY + ' ' + e.accelerationZ);
+    }
 
     function onEnter(e:Dynamic):Void {
         flag = !flag;
