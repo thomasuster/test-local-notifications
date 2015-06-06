@@ -3,13 +3,22 @@
 	
 	<meta title="Displaying a Bitmap" package="io.nme.samples.displayingabitmap" version="1.0.0" company="NME" />
 	<app main="Main" path="Export" file="DisplayingABitmap" />
-	
-	<source path="Source" />
+
+    <source path="Source" />
+    <source path="../casahx/src" />
+    <source path="../polygonal_core/src" />
+
 	
 	<haxelib name="nme" />
-    <haxelib name="local-notifications" />
+    <haxelib name="haxe-applovin"/>
 
-    <android minimum-sdk-version="15" target-sdk-version="15"/>
+    <customIOSProperty key="AppLovinSdkKey" value="8hIJaNWmoBLJtVkVyZfwTIQuQuGrgizqPG7-delPr4khaRCW_tRT9sLalbPPJNDkdLiF_RfqVNW5qibqa2Hkvc" />
+    <otherLinkerFlags value="-ObjC" />
+
+    <include path="../local-notifications/include.xml" />
+    <include path="../system-clock/include.xml" />
+
+    <android minApiLevel="15" targetApiLevel="18" />
 	
 	<assets path="Assets" rename="assets" exclude="nme.svg" />
 	<icon path="Assets/nme.svg" />

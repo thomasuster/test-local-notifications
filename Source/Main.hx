@@ -1,3 +1,4 @@
+import com.thomasuster.AndroidApplovin;
 import flash.events.AccelerometerEvent;
 import flash.sensors.Accelerometer;
 import flash.events.MouseEvent;
@@ -12,25 +13,42 @@ class Main extends Sprite {
 
     var flag:Bool;
 	var channel:SoundChannel;
+    var a:Accelerometer;
+    var i:Int;
+    var app:AndroidApplovin;
 
 	public function new () {
 		
 		super ();
-        toggleSound();
+//        toggleSound();
         stage.addEventListener(MouseEvent.CLICK, onEnter);
-        var a:Accelerometer = new Accelerometer();
-        a.setRequestedUpdateInterval(1/30);
-        a.addEventListener(AccelerometerEvent.UPDATE, onAccel);
+//        a = new Accelerometer();
+//        a.setRequestedUpdateInterval(1);
+//        a.addEventListener(AccelerometerEvent.UPDATE, onAccel);
+
+        app = new AndroidApplovin();
+        app.init();
+        app.preload();
 	}
 
+    function asd():Void {
+    }
+
+        var lastX:Float;
+        var lastY:Float;
     function onAccel(e:AccelerometerEvent):Void {
-        trace(e.accelerationX + " " + e.accelerationY + ' ' + e.accelerationZ);
+//        i++;
+//        if(i > 10)
+//            a.removeEventListener(AccelerometerEvent.UPDATE, onAccel);
+//        trace(e.accelerationX + " " + e.accelerationY);
     }
 
     function onEnter(e:Dynamic):Void {
-        flag = !flag;
-        channel.stop();
-        toggleSound();
+        trace(app.isReady());
+        app.show();
+//        flag = !flag;
+//        channel.stop();
+//        toggleSound();
     }
 
     function toggleSound():Void {
