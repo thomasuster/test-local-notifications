@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundleExecutable</key>
+	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIdentifier</key>
+	<string>::APP_PACKAGE::</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>${PRODUCT_NAME}</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	::foreach CUSTOM_IOS_PROPERTIES::
+		<key>::key::</key>
+		<string>::value::</string>
+	::end::
+	<key>CFBundleVersion</key>
+	<string>::APP_BUILD_NUMBER::</string>
+	<key>CFBundleShortVersionString</key>
+	<string>::APP_VERSION::</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIStatusBarHidden</key>
+	<::WIN_FULLSCREEN::/>
+   <key>UIViewControllerBasedStatusBarAppearance</key>
+   <::!WIN_FULLSCREEN::/>
+	::if (IOS_APP_ORIENTATION != null)::
+	<key>UISupportedInterfaceOrientations</key>
+	::IOS_APP_ORIENTATION::::end::
+	<key>UIRequiredDeviceCapabilities</key>
+   	<dict>
+		::foreach REQUIRED_CAPABILITY::
+     		<key>::name::</key>
+     		::if value::<true/>::else::<false/>::end::
+		::end::
+   	</dict>
+</dict>
+</plist>

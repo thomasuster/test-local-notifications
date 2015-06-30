@@ -13,6 +13,17 @@
     <haxelib name="haxe-applovin"/>
 
     <customIOSProperty key="AppLovinSdkKey" value="8hIJaNWmoBLJtVkVyZfwTIQuQuGrgizqPG7-delPr4khaRCW_tRT9sLalbPPJNDkdLiF_RfqVNW5qibqa2Hkvc" />
+    <customIOSProperty key="FacebookAppID" value="1025381674138924" />
+    <customIOSProperty key="FacebookDisplayName" value="Pakka Pets" />
+    <!--
+    !!!!!!!!!!!! //
+     Create an array key called URL types with a single array sub-item called URL Schemes. Give this a single item with your app ID prefixed with fb.
+
+     https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xpf1/t39.2178-6/11057195_861674397209017_2475105_n.png
+    -->
+
+    <template path="templates" />
+
     <otherLinkerFlags value="-ObjC" />
 
     <include path="../local-notifications/include.xml" />

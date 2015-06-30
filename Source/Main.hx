@@ -17,9 +17,14 @@ class Main extends Sprite {
 		
 		super ();
 
-        var sound:Sound = Assets.getMusic('assets/Party_Gu-Jeremy_S-8250_hifi.ogg', false);
-        var soundTransform = new SoundTransform();
-        soundTransform.volume = 0.5;
-        channel = sound.play(0, Math.ceil(0xFFFFFF), soundTransform);
+//        var sound:Sound = Assets.getMusic('assets/Party_Gu-Jeremy_S-8250_hifi.ogg', false);
+//        var soundTransform = new SoundTransform();
+//        soundTransform.volume = 0.5;
+//        channel = sound.play(0, 10000, soundTransform);
+        Reflect.callMethod(this, someMethod, []);
 	}
+
+    function someMethod():Void {
+        trace("hello world!");
+    }
 }
