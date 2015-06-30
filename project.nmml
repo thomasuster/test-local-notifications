@@ -15,6 +15,16 @@
     <customIOSProperty key="AppLovinSdkKey" value="8hIJaNWmoBLJtVkVyZfwTIQuQuGrgizqPG7-delPr4khaRCW_tRT9sLalbPPJNDkdLiF_RfqVNW5qibqa2Hkvc" />
     <customIOSProperty key="FacebookAppID" value="1025381674138924" />
     <customIOSProperty key="FacebookDisplayName" value="Pakka Pets" />
+    <customIOSBlock value="
+    <key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1025381674138924</string>
+			</array>
+		</dict>
+	</array>" />
     <!--
     !!!!!!!!!!!! //
      Create an array key called URL types with a single array sub-item called URL Schemes. Give this a single item with your app ID prefixed with fb.
