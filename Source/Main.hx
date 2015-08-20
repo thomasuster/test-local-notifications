@@ -1,4 +1,3 @@
-import com.thomasuster.AndroidApplovin;
 import flash.events.AccelerometerEvent;
 import flash.sensors.Accelerometer;
 import flash.events.MouseEvent;
@@ -22,6 +21,7 @@ class Main extends Sprite {
 //        soundTransform.volume = 0.5;
 //        channel = sound.play(0, 10000, soundTransform);
         Reflect.callMethod(this, someMethod, []);
+
 	}
 
     function someMethod():Void {
