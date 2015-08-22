@@ -1,0 +1,1 @@
+haxelib run haxe-android-expansion make main-expansion 200 io.nme.samples.displayingabitmap
