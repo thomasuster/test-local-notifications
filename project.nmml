@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 
-    <meta build-number="179" />
+    <meta build-number="180" />
 	<meta title="Displaying a Bitmap" package="io.nme.samples.displayingabitmap" version="1.0.0" company="NME" />
 	<app main="Main" path="Export" file="DisplayingABitmap" />
 

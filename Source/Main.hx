@@ -28,7 +28,7 @@ class Main extends Sprite {
 
 	public function new () {
 		super ();
-        version = 179;
+        version = 180;
         addEventListener(Event.ADDED_TO_STAGE, onAdded);
 	}
 
