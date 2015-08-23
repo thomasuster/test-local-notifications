@@ -24,8 +24,11 @@ import haxe.zip.Entry;
 
 class Main extends Sprite {
 
+    var version:Int;
+
 	public function new () {
 		super ();
+        version = 179;
         addEventListener(Event.ADDED_TO_STAGE, onAdded);
 	}
 
@@ -34,6 +37,9 @@ class Main extends Sprite {
         addImage();
         Sys.println("ASDASDASD");
         trace("!!!!!!!!!!!!!!!!!");
+        AndroidExpansion.setKey('MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAul9VjbxKwReCzuLeVfNi1sCrsv/upIiSQsTS+5ToOiFD5tjEHNd4p/m95m4/8wf7aLgTjkhi7w8LTKwm+JVdFl5l4ZADY66Y+klysm95jrYhCHnbNjZIpQp6dKD94pVzo8Hf3d00vB0ZnyVhOZO8aMg9RrJtyzdioJgdMrpBq8yHXL8X/gvD00w/AkqHT+YUAXVn7FwuljMiDSAK15wO/uc/ec37yA4m8zMEK8K4skvzbA9cbAdBp+0PkxK+ep7zxNBtDtfCBJjlW4l1Fb3O7VA3i2abrxeWUnWZu3I51Rj/00h/cUXKz19TE8x/pDsUWUrRPqO5y98MsYctxX2drwIDAQAB');
+        AndroidExpansion.setVersion(version);
+        AndroidExpansion.setBytes(6342);
         var delivered:Bool = AndroidExpansion.expansionFilesDelivered();
         trace('expansion.expansionFilesDelivered() ' + delivered);
         if(!delivered) {
@@ -45,7 +51,8 @@ class Main extends Sprite {
         else {
             trace('main file? = ' + AndroidExpansion.getMainFile());
             var expansionReader:ExpansionReader = new ExpansionReader();
-            addBitmapData(expansionReader.getBitmapData());
+            expansionReader.version = version;
+            addBitmapData(expansionReader.getBitmapData('main-expansion/nme.png'));
             trace('added');
         }
 //        tryAddingOBBImage();
